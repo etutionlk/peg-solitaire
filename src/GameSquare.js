@@ -1,8 +1,8 @@
 import React from 'react';
 
-function GameSquare(){
+function GameSquare(props){
         return (
-                <button className="square"></button>
+                <button className="square">{props.value}</button>
         );
 }
 
