@@ -4,13 +4,13 @@ import BlankSquare from "./BlankSquare";
 
 class Board extends Component {
 
-    renderGameSquare(i) {
-        var squareValue = 'O'
-        if (i==16) {
-            squareValue = ''
-        }
+    renderGameSquare(x,y) {
+        const board = this.props.pegs
+        const squareValue = board[x][y] ? "O":""
+        // console.log(this.props.board.current)
+
         return (
-            <GameSquare value={squareValue} />
+            <GameSquare value={squareValue} onClick={() => this.props.onClick({x,y})}/>
         );
     }
 
@@ -26,65 +26,65 @@ class Board extends Component {
                 <div className="board-row">
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
-                    {this.renderGameSquare(0)}
-                    {this.renderGameSquare(1)}
-                    {this.renderGameSquare(2)}
+                    {this.renderGameSquare(0,2)}
+                    {this.renderGameSquare(0,3)}
+                    {this.renderGameSquare(0,4)}
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
                 </div>
                 <div className="board-row">
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
-                    {this.renderGameSquare(3)}
-                    {this.renderGameSquare(4)}
-                    {this.renderGameSquare(5)}
+                    {this.renderGameSquare(1,2)}
+                    {this.renderGameSquare(1,3)}
+                    {this.renderGameSquare(1,4)}
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
-                </div>
-
-                <div className="board-row">
-                    {this.renderGameSquare(6)}
-                    {this.renderGameSquare(7)}
-                    {this.renderGameSquare(8)}
-                    {this.renderGameSquare(9)}
-                    {this.renderGameSquare(10)}
-                    {this.renderGameSquare(11)}
-                    {this.renderGameSquare(12)}
-                </div>
-                <div className="board-row">
-                    {this.renderGameSquare(13)}
-                    {this.renderGameSquare(14)}
-                    {this.renderGameSquare(15)}
-                    {this.renderGameSquare(16)}
-                    {this.renderGameSquare(17)}
-                    {this.renderGameSquare(18)}
-                    {this.renderGameSquare(19)}
-                </div>
-                <div className="board-row">
-                    {this.renderGameSquare(20)}
-                    {this.renderGameSquare(21)}
-                    {this.renderGameSquare(22)}
-                    {this.renderGameSquare(23)}
-                    {this.renderGameSquare(24)}
-                    {this.renderGameSquare(25)}
-                    {this.renderGameSquare(26)}
                 </div>
 
                 <div className="board-row">
+                    {this.renderGameSquare(2,0)}
+                    {this.renderGameSquare(2,1)}
+                    {this.renderGameSquare(2,2)}
+                    {this.renderGameSquare(2,3)}
+                    {this.renderGameSquare(2,4)}
+                    {this.renderGameSquare(2,5)}
+                    {this.renderGameSquare(2,6)}
+                </div>
+                <div className="board-row">
+                    {this.renderGameSquare(3,0)}
+                    {this.renderGameSquare(3,1)}
+                    {this.renderGameSquare(3,2)}
+                    {this.renderGameSquare(3,3)}
+                    {this.renderGameSquare(3,4)}
+                    {this.renderGameSquare(3,5)}
+                    {this.renderGameSquare(3,6)}
+                </div>
+                <div className="board-row">
+                    {this.renderGameSquare(4,0)}
+                    {this.renderGameSquare(4,1)}
+                    {this.renderGameSquare(4,2)}
+                    {this.renderGameSquare(4,3)}
+                    {this.renderGameSquare(4,4)}
+                    {this.renderGameSquare(4,5)}
+                    {this.renderGameSquare(4,6)}
+                </div>
+
+                <div className="board-row">
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
-                    {this.renderGameSquare(27)}
-                    {this.renderGameSquare(28)}
-                    {this.renderGameSquare(29)}
+                    {this.renderGameSquare(5,2)}
+                    {this.renderGameSquare(5,3)}
+                    {this.renderGameSquare(5,4)}
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
                 </div>
                 <div className="board-row">
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
-                    {this.renderGameSquare(30)}
-                    {this.renderGameSquare(31)}
-                    {this.renderGameSquare(32)}
+                    {this.renderGameSquare(6,2)}
+                    {this.renderGameSquare(6,3)}
+                    {this.renderGameSquare(6,4)}
                     {this.renderBlankSquare()}
                     {this.renderBlankSquare()}
                 </div>
